@@ -34,6 +34,15 @@ The hypothesis of this project is that the SpaceX REST API can handle moderate u
 
 ---
 
+## Repository Structure
+
+```text
+scripts/       -> Contains k6 testing scripts
+screenshots/   -> Contains test result screenshots
+results/       -> Contains raw output files
+
+```
+
 ## Load Test
 
 The load test was performed to evaluate the API performance under normal expected traffic conditions.
