@@ -65,6 +65,13 @@ The throughput test measures API performance under low concurrency using 10 conn
 ```bash
 autocannon -c 10 -d 10 -H "x-api-key: YOUR_API_KEY" https://reqres.in/api/users?page=2
 ```
+### Design
+
+```bash
+Design: Analyzes performance as traffic remains at a baseline level.
+```
+
+<img width="1509" height="70" alt="image" src="https://github.com/user-attachments/assets/1aed5a21-0fe5-4431-8e46-f5ff9b7df7b6" />
 
 ---
 
@@ -77,6 +84,13 @@ The burst spike test subjects the API to a sudden surge of 200 concurrent connec
 ```bash
 autocannon -c 200 -d 10 -H "x-api-key: YOUR_API_KEY" https://reqres.in/api/users?page=2
 ```
+### Design
+
+```bash
+ Design: Sudden jump from low to 200 concurrent users
+```
+<img width="1527" height="74" alt="image" src="https://github.com/user-attachments/assets/4e32fb4d-4d9e-47d8-a9b2-fff1d449c435" />
+
 
 ---
 
@@ -89,6 +103,13 @@ The endurance soak test applies a steady load of 50 connections over a duration 
 ```bash
 autocannon -c 50 -d 300 -H "x-api-key: YOUR_API_KEY" https://reqres.in/api/users?page=2
 ```
+### Design
+
+```bash
+Design: 50 users for 5 minutes to detect performance degradation over time.
+```
+<img width="1517" height="73" alt="image" src="https://github.com/user-attachments/assets/b23604cd-3649-410d-a664-c0c116c175be" />
+
 
 ---
 
@@ -103,6 +124,8 @@ autocannon -c 50 -d 300 -H "x-api-key: YOUR_API_KEY" https://reqres.in/api/users
 | Total Requests | 3,000 |
 | Error Rate | 0% |
 
+<img width="941" height="391" alt="image" src="https://github.com/user-attachments/assets/cf8bdb60-ae95-401b-89fa-c2c54008f917" />
+
 ---
 
 ## 4.2 Burst Spike Test Result
@@ -113,6 +136,8 @@ autocannon -c 50 -d 300 -H "x-api-key: YOUR_API_KEY" https://reqres.in/api/users
 | Max Latency | 1466 ms |
 | Success Rate | 0% |
 | Failed Responses | 3,558 non-2xx responses |
+
+<img width="992" height="416" alt="image" src="https://github.com/user-attachments/assets/792878cf-be7f-4de4-9a63-abbc07c3a975" />
 
 ---
 
@@ -125,6 +150,8 @@ autocannon -c 50 -d 300 -H "x-api-key: YOUR_API_KEY" https://reqres.in/api/users
 | Total Requests | 600,000 |
 | Error Rate | ~100% |
 | Failed Responses | 598,898 non-2xx responses |
+
+<img width="985" height="414" alt="image" src="https://github.com/user-attachments/assets/d0aa37a6-e27a-4b1e-b5d3-3bdbb2c7a12e" />
 
 ---
 
