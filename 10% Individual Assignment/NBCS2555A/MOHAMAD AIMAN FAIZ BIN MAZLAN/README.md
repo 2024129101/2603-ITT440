@@ -139,7 +139,7 @@ $env:K6_OUT="influxdb=http://localhost:8086/k6"
 k6 run script.js
 ```
 
-All scenarios are already configured inside `script.js`.
+All scenarios are already configured inside [`script.js`](script.js).
 
 ---
 
