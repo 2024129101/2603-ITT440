@@ -21,6 +21,12 @@ Objectives:
 
 ---
 
+## Demo Video
+
+🔗 https://youtu.be/KFg0XE7Ggmo?si=Xg_N9zZDzMCAKYe7
+
+---
+
 ## 🌐 API Target
 
 🔗 https://jsonplaceholder.typicode.com/posts  
