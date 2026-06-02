@@ -107,27 +107,26 @@ MUHAMAD SHAHMI BIN MOKTHAR\
 ├── screenshots/
 ├── results/
 ├── jmeter/
-└── report.pdf
+└── Performance Testing and Bottleneck Analysis of DummyJSON Products API Using Apache JMeter.pdf
 ```
 
-## Sample Results
+## Aggregate Report Results
 
-| Test Type | Avg Response Time | Throughput | Error Rate |
-|---|---|---|---|
-| Load Test | 220 ms | 60 req/sec | 0% |
-| Stress Test | 1100 ms | 85 req/sec | 6% |
-| Spike Test | 1800 ms | 70 req/sec | 11% |
+| Test Type | Samples | Average (ms) | Maximum (ms) | Error Rate | Throughput |
+|---------|---------|---------|---------|---------|---------|
+| Load Test | 72,076 | 197 | 3,112 | 0.00% | 240.1 req/sec |
+| Stress Test | 74,744 | 542 | 16,186 | 0.00% | 248.4 req/sec |
+| Spike Test | 46,915 | 568 | 2,343 | 0.00% | 259.9 req/sec |
 
 ---
 
-## Bottleneck Analysis
+## Key Findings
 
-Potential bottlenecks identified:
-
-- Network latency
-- API throttling
-- Request queue congestion
-- Server processing delays
+- Zero request failures across all testing scenarios.
+- Response time increased as workload increased.
+- The API remained stable under concurrent traffic.
+- Throughput remained consistently high.
+- The API demonstrated strong scalability and reliability.
 
 ---
 
@@ -137,13 +136,14 @@ Potential bottlenecks identified:
 - Use CDN services
 - Optimize API response handling
 - Apply load balancing strategies
+- Continuously monitor API performance.
 
 ---
 
 ## Conclusion
 
-This project successfully evaluated the performance and scalability of DummyJSON Products API using Apache JMeter.
+The DummyJSON Products API maintained a 0.00% error rate across all testing scenarios while handling large volumes of concurrent requests.
 
-The results indicate that the API performs efficiently under moderate workloads but experiences increased latency and error rates under excessive traffic conditions.
+The results demonstrate excellent reliability, stability, and scalability when tested using Apache JMeter.
 
 ---
