@@ -195,7 +195,7 @@ The results demonstrate excellent reliability, stability, and scalability when t
 
 ---
 
-## Embedded YouTube Video Link
+## YouTube Video Link
 
 <insert-link>
 
