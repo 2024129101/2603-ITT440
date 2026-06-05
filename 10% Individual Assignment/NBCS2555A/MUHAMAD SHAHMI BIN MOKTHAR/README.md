@@ -49,6 +49,10 @@ Evaluate API performance under normal traffic conditions.
 | Ramp-up | 30 seconds |
 | Duration | 5 minutes |
 
+<p align="center">
+  <img src="Screenshots/Load%20Test%20Config.png" alt="Load Test Config" width="800">
+</p>
+
 ---
 
 ### 2. Stress Test
@@ -60,6 +64,10 @@ Determine system behavior under excessive load.
 | Users | 150 |
 | Ramp-up | 60 seconds |
 | Duration | 5 minutes |
+
+<p align="center">
+  <img src="Screenshots/Stress%20Test%20Config.png" alt="Stress Test Config" width="800">
+</p>
 
 ---
 
@@ -74,6 +82,9 @@ Analyze API response during sudden traffic spikes.
 | Spike Time | 5 seconds |
 | Duration | 3 minutes |
 
+<p align="center">
+  <img src="Screenshots/Spike%20Test%20Config.png" alt="Spike Test Config" width="800">
+</p>
 
 ---
 
@@ -86,7 +97,9 @@ Analyze API response during sudden traffic spikes.
 | Method | GET |
 | Path | /products |
 
-
+<p align="center">
+  <img src="Screenshots/http%20request%20config.png" alt="HTTP Request Config" width="800">
+</p>
 
 ---
 
@@ -107,7 +120,6 @@ MUHAMAD SHAHMI BIN MOKTHAR\
 │
 ├── README.md
 ├── screenshots/
-├── results/
 ├── jmeter/
 └── Performance Testing and Bottleneck Analysis of DummyJSON Products API Using Apache JMeter.pdf
 ```
@@ -120,7 +132,40 @@ MUHAMAD SHAHMI BIN MOKTHAR\
 | Stress Test | 74,744 | 542 | 16,186 | 0.00% | 248.4 req/sec |
 | Spike Test | 46,915 | 568 | 2,343 | 0.00% | 259.9 req/sec |
 
----
+## Result
+
+- Load Test
+<p align="center">
+  <img src="Screenshots/Load%20Test%20Aggregate%20Report.png" alt="Load Test Aggregate Report" width="800">
+</p>
+
+- Stress Test
+<p align="center">
+  <img src="Screenshots/Stress%20Test%20Aggregate%20Report.png" alt="Load Test Aggregate Report" width="800">
+</p>
+
+- Spike Test
+<p align="center">
+  <img src="Screenshots/Spike%20Test%20Aggregate%20Report.png" alt="Load Test Aggregate Report" width="800">
+</p>
+
+- Average Response Time (ms)
+<p align="center">
+  <img src="Screenshots/Average%20response%20time%20comparison.png" alt="Average Response Time Comparison" width="600">
+</p>
+<p align="center">
+The graph shows that response time increased significantly during Stress Test and Spike Test due to 
+higher concurrent traffic.
+</p>
+
+- Throughput Comparison
+<p align="center">
+  <img src="Screenshots/Throughput%20Comparison.png" alt="Throughput Comparison" width="600">
+</p>
+<p align="center">
+The throughput graph shows that the API handled more requests per second during higher traffic 
+conditions. 
+</p>
 
 ## Key Findings
 
