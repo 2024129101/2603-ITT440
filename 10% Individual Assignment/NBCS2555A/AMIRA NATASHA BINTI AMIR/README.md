@@ -188,4 +188,4 @@ Apache JMeter successfully exposed the distinct architectural performance bounda
 ## 🎥 Video Presentation
 Click the banner below to watch the comprehensive project walkthrough and analysis:
 
-[![Performance Testing Presentation]
+https://youtu.be/BLZh2ZvoXVo
