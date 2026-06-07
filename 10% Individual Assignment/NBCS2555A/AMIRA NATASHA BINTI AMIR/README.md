@@ -1,217 +1,191 @@
-# AMIRA NATASHA BINTI AMIR
-# Comprehensive Performance Testing and Bottleneck Analysis of a Web Application using Apache JMeter
+  ![Logo](apache%20Jmeter.png)
 
-## Project Overview
 
-This project focuses on conducting comprehensive performance testing on the web application:
+  
+# 🚀 Comprehensive Performance Testing and Bottleneck Analysis of a Web Application Using Apache JMeter
 
-https://performancetestingpractice.com/
-
-using Apache JMeter. The objective of this project is to evaluate the application's performance, stability, and scalability under different user load conditions through multiple testing methodologies.
+---
+## 👤 Author Information
+* **Name:** AMIRA NATASHA BINTI AMIR
+* **Course:** ITT440 NETWORK PROGRAMMING
+* **Project:** Comprehensive Web Application Performance Testing & Analysis
 
 ---
 
-# Objectives
+## 📌 Project Overview
+This project focuses on conducting a comprehensive performance evaluation of the target web application:
+👉 **[the-internet.herokuapp.com](https://the-internet.herokuapp.com/)**
 
-* To perform Load Testing, Stress Testing, and Soak Testing using Apache JMeter.
-* To analyze the application's response time, throughput, latency, and error rate.
-* To identify system bottlenecks and performance limitations.
-* To provide recommendations for performance optimization and system improvement.
-
----
-
-# Performance Testing Tool
-
-## Apache JMeter
-
-Apache JMeter was selected because it is an open-source and industry-standard performance testing tool capable of simulating concurrent users and generating detailed analytical reports.
-
-### Advantages of Apache JMeter
-
-* Free and open-source
-* Supports multiple performance testing types
-* User-friendly graphical interface
-* Generates detailed reports and graphs
-* Widely used in real-world industry testing
-
-Official Website:
-https://jmeter.apache.org/
+Using **Apache JMeter**, the application's performance, stability, and scalability were evaluated under various user load conditions through distinct testing methodologies, aiming to uncover hidden system constraints.
 
 ---
 
-# Target Web Application
-
-Website Tested:
-
-https://performancetestingpractice.com/
-
-This website was selected because it is publicly accessible and designed specifically for practicing performance and automation testing scenarios.
+## 🎯 Objectives
+* **Execute Multi-Tier Testing:** Conduct Load, Stress, and Soak testing using Apache JMeter.
+* **Metric Evaluation:** Analyze critical KPIs including response time, throughput, latency, and error rates.
+* **Identify Bottlenecks:** Detect system limitations, breaking points, and performance degradation causes.
+* **Provide Optimization Strategies:** Deliver actionable recommendations for infrastructure and code-level improvements.
 
 ---
 
-# Test Environment
+## 🛠️ Performance Testing Tool
 
-| Component           | Specification       |
-| ------------------- | ------------------- |
-| Operating System    | Windows 11          |
-| Processor           | Intel Core i5       |
-| RAM                 | 8 GB                |
-| Tool                | Apache JMeter 5.6.3 |
-| Java Version        | JDK 17              |
-| Browser             | Google Chrome       |
-| Internet Connection | Stable Broadband    |
+### **Apache JMeter (v5.6.3)**
+Apache JMeter was selected as the core testing engine because it is an industry-standard, open-source tool capable of simulating heavy concurrent user behavior and generating high-fidelity analytical reports.
 
----
+### **Key Advantages**
+* 💰 **Cost-Effective:** Free and open-source with extensive community support.
+* 📈 **Versatile:** Native support for multiple protocols and performance testing paradigms.
+* 🖥️ **User-Centric:** Intuitive GUI for test script development and robust CLI for non-GUI execution.
+* 📊 **Reporting:** Generates dynamic, data-rich HTML Dashboard Reports.
 
-# Performance Testing Types
-
-## 1. Load Test
-
-### Objective
-
-To determine whether the application can handle normal expected traffic loads.
-
-### Configuration
-
-| Parameter      | Value      |
-| -------------- | ---------- |
-| Virtual Users  | 10         |
-| Ramp-Up Period | 10 Seconds |
-| Loop Count     | 2          |
-
-### Expected Outcome
-
-The application should remain stable with low response time and minimal errors under normal user traffic conditions.
+🔗 **Official Website:** [Apache JMeter](https://jmeter.apache.org/)
 
 ---
 
-## 2. Stress Test
+## 💻 Test Environment Configuration
 
-### Objective
+The testing was executed within a controlled local environment with the following specifications:
 
-To identify the breaking point of the application under extreme traffic conditions.
-
-### Configuration
-
-| Parameter      | Value      |
-| -------------- | ---------- |
-| Virtual Users  | 100        |
-| Ramp-Up Period | 20 Seconds |
-| Loop Count     | 5          |
-
-### Expected Outcome
-
-The application may experience increased response time, server instability, and request failures under heavy load conditions.
+| Component | Specification |
+| :--- | :--- |
+| **Operating System** | Windows 11 |
+| **Processor** | Intel Core i5 |
+| **RAM** | 8 GB |
+| **Testing Tool** | Apache JMeter 5.6.3 |
+| **Java Environment** | JDK 17 |
+| **Browser Context** | Google Chrome |
+| **Network Profile** | WiFi Connection |
 
 ---
 
-## 3. Soak Test
+## 🧪 Performance Testing Scenarios
 
-### Objective
+### **1. Load Test (Normal Workload)**
+* **Objective:** Evaluate how the system handles the normal expected concurrent traffic.
+* **Configuration:**
+  * **Virtual Users (Threads):** 50
+  * **Ramp-Up Period:** 30 Seconds
+  * **Loop Count:** Infinite (Controlled by duration)
+  * **Duration:** 300 Seconds (5 Minutes)
+* **Expected Outcome:** Low response times, high stability, and 0% error rates under basic concurrent user loads.
 
-To evaluate the long-term stability and reliability of the application.
+### **2. Stress Test (Peak Workload)**
+* **Objective:** Find the application's breaking point and behavior under sudden heavy traffic conditions.
+* **Configuration:**
+  * **Virtual Users (Threads):** 500
+  * **Ramp-Up Period:** 20 Seconds
+  * **Loop Count:** Infinite (Controlled by duration)
+  * **Duration:** 300 Seconds (5 Minutes)
+* **Expected Outcome:** Spikes in response times, potential server-side instabilities, and noticeable request failures due to extreme load.
 
-### Configuration
-
-| Parameter     | Value      |
-| ------------- | ---------- |
-| Virtual Users | 20         |
-| Duration      | 30 Minutes |
-| Loop Count    | Forever    |
-
-### Expected Outcome
-
-The application should maintain stable performance over an extended period without significant degradation or memory leaks.
-
----
-
-# Test Methodology
-
-The following methodology was applied during testing:
-
-1. Configure Thread Group settings in Apache JMeter.
-2. Create HTTP Request samplers targeting the web application.
-3. Simulate concurrent virtual users.
-4. Execute Load, Stress, and Soak testing scenarios.
-5. Collect performance metrics using JMeter listeners and HTML Dashboard Reports.
-6. Analyze response time, throughput, latency, and error rates.
-7. Identify bottlenecks and system limitations.
+### **3. Soak Test (Endurance Workload)**
+* **Objective:** Identify memory leaks, resource depletion, and performance degradation over time.
+* **Configuration:**
+  * **Virtual Users (Threads):** 50
+  * **Loop Count:** Infinite (Controlled by duration)
+  * **Duration:** 1800 Seconds (30 Minutes)
+* **Expected Outcome:** Consistent memory utilization and steady throughput without system degradation over an extended timeline.
 
 ---
 
-# Performance Metrics Analyzed
-
-The following Key Performance Indicators (KPIs) were analyzed:
-
-| KPI            | Description                             |
-| -------------- | --------------------------------------- |
-| Response Time  | Time taken for the server to respond    |
-| Throughput     | Number of requests processed per second |
-| Error Rate     | Percentage of failed requests           |
-| Latency        | Delay before receiving server response  |
-| Active Threads | Number of active virtual users          |
+## 🔄 Test Methodology
+1. **Scripting:** Formulate Thread Group structures and define HTTP Request Samplers.
+2. **Simulation:** Configure logical pacing, timers, and ramp-up execution states.
+3. **Execution:** Run automated suites across Load, Stress, and Soak variations.
+4. **Data Collection:** Capture raw performance metrics utilizing JMeter Listeners (`.jtl` logs).
+5. **Reporting:** Generate native HTML Dashboard components and aggregate data matrices.
+6. **Analysis:** Cross-examine metrics to pinpoint application failure vectors.
 
 ---
 
-# Bottleneck Analysis
+## 📈 Performance Metrics Analyzed
 
-Based on the testing conducted, several potential bottlenecks were identified:
-
-* Increased response time during high concurrent traffic.
-* HTTP request failures under stress conditions.
-* Possible server-side rate limiting or anti-bot protection.
-* Resource limitations affecting throughput consistency.
-
----
-
-# Recommendations
-
-Several improvements are recommended to enhance the application's performance:
-
-* Implement server-side load balancing.
-* Optimize backend processing and database queries.
-* Improve caching mechanisms.
-* Increase server resource allocation.
-* Configure better request handling during peak traffic conditions.
+| Metric | KPI Target | Description |
+| :--- | :--- | :--- |
+| **Response Time** | `ms` | Total time elapsed from request dispatch to final byte reception. |
+| **Throughput** | `req/sec` | The volume of transactions handled by the server per second. |
+| **Error Rate** | `%` | The percentage of failed HTTP requests against total requests. |
+| **Latency** | `ms` | Network delay before the server starts responding to a request. |
+| **Active Threads** | `count` | The number of concurrent virtual users active at any given second. |
 
 ---
 
-# Conclusion
-
-In conclusion, Apache JMeter successfully demonstrated the performance characteristics of the target web application under different load conditions. The Load Test showed acceptable performance during normal traffic, while the Stress Test revealed system limitations under heavy load. The Soak Test evaluated the application's long-term stability and consistency.
-
-The project provided valuable insights into web application performance analysis, bottleneck identification, and optimization strategies commonly applied in real-world industry environments.
-
----
-
-# Screenshots
-
-## JMeter Configuration
-
-
-
-## Aggregate Report
-
-
-
-## HTML Dashboard Report
-
-
-
-## Graph Analysis
-
+## ⚠️ Bottleneck Analysis Findings
+* **Latency Spikes:** Visible increase in average response times when concurrent traffic scaled past the baseline threshold.
+* **Error Influx:** Request failures surfaced under stress execution, potentially indicating server-side connection pooling exhaustion.
+* **Rate Limiting:** Trace patterns indicate potential anti-bot policies or strict rate-limiting caps on the hosting infrastructure.
+* **Resource Contention:** Fluctuations in throughput stability under sustained loads, hinting at backend or CPU limits.
 
 ---
 
-# Video Presentation
-
-YouTube Link:
-
+## 💡 Recommendations for Optimization
+* ⚖️ **Load Balancing:** Deploy a reverse proxy (e.g., Nginx) or load balancer to distribute user traffic evenly.
+* 🗄️ **Query Optimization:** Optimize heavy backend database operations and introduce indexing.
+* 💾 **Caching Layer:** Implement Redis or Memcached server-side to cache static content and redundant queries.
+* ⚙️ **Resource Scaling:** Increase horizontal/vertical server scaling (RAM/vCPU allocation) during peak seasons.
+* 🛡️ **Connection Pooling:** Tune server runtime configurations (e.g., Tomcat/Apache) to handle larger concurrent request pools.
 
 ---
 
-# Author
+## 🏁 Conclusion
+Apache JMeter successfully exposed the distinct architectural performance boundaries of the target web application. While the platform demonstrated high reliability and acceptable response curves during the **Load Test**, system bottlenecks and processing thresholds were made evident during the **Stress Test**. Furthermore, the **Soak Test** verified that the platform maintains adequate baseline endurance under prolonged traffic conditions without catastrophic crashes.
 
-Name: AMIRA NATASHA BINTI AMIR
-Course: ITT440
-Project: Comprehensive Web Application Performance Testing & Analysis
+---
+
+## 📸 Empirical Evidence & Reports
+
+### 🟩 1. Load Test Results (50 Users / 300s)
+<details>
+  <summary>📐 Click to see 3 Load Test Screenshots</summary>
+  <br>
+  
+  #### 1. Statistics Matrix
+  ![Load Test Statistics](LOAD%20STATISTIC.png) 
+  
+  #### 2. Response Times Over Time
+  ![Load Test Response Time](LOAD%20RESPONSE.png)
+  
+  #### 3. Transactions Per Second (Throughput)
+  ![Load Test TPS](LOAD%20TRANSACTION.png)
+</details>
+
+### 🟨 2. Stress Test Results (500 Users / 300s)
+<details>
+  <summary>📐 Click to see 4 Stress Test Screenshots</summary>
+  <br>
+  
+  #### 1. Statistics Matrix
+  ![Stress Test Statistics](STRESS%20STATISTIC.png)
+  
+  #### 2. Response Times Over Time
+  ![Stress Test Response Time](STRESS%20RESPONSE.png)
+  
+  #### 3. Transactions Per Second (Throughput)
+  ![Stress Test TPS](STRESS%20TRANSACTION.png)
+  
+  #### 4. Identified System Errors & Failure Codes
+  ![Stress Test Errors](STRESS%20ERROR.png)
+</details>
+
+### 🟦 3. Soak Test Results (50 Users / 30 Mins)
+<details>
+  <summary>📐 Click to see 3 Soak Test Screenshots</summary>
+  <br>
+  
+  #### 1. Statistics Matrix
+  ![Soak Test Statistics](SOAK%20STATISTIC%20.png)
+  
+  #### 2. Response Times Over Time
+  ![Soak Test Response Time](SOAK%20RESPONSE.png)
+  
+  #### 3. Transactions Per Second (Throughput)
+  ![Soak Test TPS](SOAK%20TRANSACTION.png)
+</details>
+
+---
+
+## 🎥 Video Presentation
+Click the banner below to watch the comprehensive project walkthrough and analysis:
+
+[![Performance Testing Presentation]
