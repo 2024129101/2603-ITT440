@@ -100,8 +100,10 @@ finally:
     # Close the socket
     client_socket.close()
 ```
+## Parallel Programming using Python
+In short, sequential processing executes tasks strictly one after the other on a single CPU core, whereas concurrency is about managing multiple tasks at once by rapidly switching between them (ideal for waiting on web requests). Parallelism, on the other hand, is about executing multiple tasks truly simultaneously, which requires a multi-core CPU to handle heavy mathematical or data processing. A thread is simply the smallest unit of execution (like an individual worker) within a program; multiple threads can run concurrently to keep your application fast and responsive without needing extra CPU cores.
 
-## Sequential vs Parallel example
+### Sequential vs Parallel example
 **Sequential Execution**
 The program executes the classes strictly one after another Square --> Cube --> Fourth.
 The terminal output is clean, ordered, and perfectly predictable. It uses minimal system resources.
