@@ -1,4 +1,106 @@
 # 2603-ITT440
+## Python Docker Container
+Why Using Docker for Python is Brilliant
+***No More "But it works on my machine!"***
+We’ve all been there. Your laptop runs Python 3.12, the production server runs Python 3.8, and your colleague is on Windows whilst you are on a Mac. When you deploy, everything breaks. Docker solves this by packaging your OS, Python version, and dependencies into a single container. If it runs on your machine, it will run exactly the same way anywhere else.
+
+***Keeps Your Local Machine Clean***
+If you are juggling an older project that requires Python 3.7 and a brand-new one using Python 3.13, managing your local environment can become a bit of a nightmare. With Docker, you don't need to clog up your hard drive with multiple local versions. You simply change the image tag (e.g., python:3.7-slim vs python:3.13-slim) and your host machine stays completely pristine.
+
+***Seamless Integration with Databases***
+If your Python application relies on a database like MySQL, PostgreSQL or Redis, you don’t need to go through the faff of installing them locally. Using docker-compose, you can spin up your Python app alongside its database with a single, straightforward command.
+
+### Easy Way
+You can skip docker pull if you want
+```
+sudo docker pull python:3.14
+```
+Temporary container
+```
+sudo docker run --rm -p 8888:8888 -v ./:/kelassir --name sir1 python:3.14 tail -f /dev/null
+```
+the command tail -f /dev/null is a trick to make your container is always run until you issue the docker stop and docker rm.
+```
+sudo docker exec -it sir1 bash
+```
+
+### Jupyter-Notebook
+In Python container you can install Jupyter Notebook
+```
+pip install jupyterlab
+```
+Run as server. No more localhost.
+```
+jupyter lab --allow-root --no-browser --ip=0.0.0.0 --port=8888
+```
+
+If you want to skip using Python container and pull existing Jupyterlab from hub.
+```
+sudo docker pull jupyter/scipy-notebook
+```
+Now run jupyter-lab container
+```
+sudo docker run -p 8889:8888 -v "$(pwd)":/kelassir jupyter/scipy-notebook
+```
+
+## Socket Programming using Python
+***Simple Python UDP Time Server***
+Here is a simple, lightweight UDP time server in Python.
+
+Unlike TCP, UDP is connectionless, meaning the server doesn't need to "accept" a connection. It just sits there, listens for an incoming packet (even an empty one), and immediately replies with the current time.
+```
+import socket
+import datetime
+
+# Define the server IP and port
+UDP_IP = "127.0.0.1"  # Localhost
+UDP_PORT = 12345
+
+# 1. Create a UDP socket (SOCK_DGRAM specifies UDP)
+server_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+# 2. Bind the socket to the IP and port
+server_socket.bind((UDP_IP, UDP_PORT))
+
+print(f"UDP Time Server is running on {UDP_IP}:{UDP_PORT}...")
+
+while True:
+    # 3. Wait for an incoming message (data, client_address)
+    # 1024 is the buffer size in bytes
+    data, address = server_socket.recvfrom(1024)
+    
+    print(f"Received request from {address}")
+    
+    # 4. Get the current time and format it as a string
+    current_time = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    
+    # 5. Send the time back to the client (must be encoded to bytes)
+    server_socket.sendto(current_time.encode('utf-8'), address)
+```
+```
+import socket
+
+UDP_IP = "127.0.0.1"
+UDP_PORT = 12345
+
+# Create a UDP socket
+client_socket = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+
+try:
+    # Send an empty message to trigger the server
+    print("Requesting time from server...")
+    client_socket.sendto(b"", (UDP_IP, UDP_PORT))
+    
+    # Receive the response from the server
+    data, server = client_socket.recvfrom(1024)
+    
+    print(f"Server Time: {data.decode('utf-8')}")
+
+finally:
+    # Close the socket
+    client_socket.close()
+```
+
 ## Sequential vs Parallel example
 **Sequential Execution**
 The program executes the classes strictly one after another Square --> Cube --> Fourth.
