@@ -1,0 +1,118 @@
+** SIEGE 4.0.7
+** Preparing 50 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...
+Transactions:		        1693 hits
+Availability:		      100.00 %
+Elapsed time:		       59.14 secs
+Data transferred:	      189.95 MB
+Response time:		        1.70 secs
+Transaction rate:	       28.63 trans/sec
+Throughput:		        3.21 MB/sec
+Concurrency:		       48.69
+Successful transactions:        1693
+Failed transactions:	           0
+Longest transaction:	        6.05
+Shortest transaction:	        0.95
+ 
+** SIEGE 4.0.7
+** Preparing 100 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...
+Transactions:		        3533 hits
+Availability:		      100.00 %
+Elapsed time:		       59.96 secs
+Data transferred:	      407.78 MB
+Response time:		        1.67 secs
+Transaction rate:	       58.92 trans/sec
+Throughput:		        6.80 MB/sec
+Concurrency:		       98.57
+Successful transactions:        3533
+Failed transactions:	           0
+Longest transaction:	       10.66
+Shortest transaction:	        0.94
+ 
+** SIEGE 4.0.7
+** Preparing 150 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...
+Transactions:		        4993 hits
+Availability:		      100.00 %
+Elapsed time:		       59.92 secs
+Data transferred:	      560.75 MB
+Response time:		        1.76 secs
+Transaction rate:	       83.33 trans/sec
+Throughput:		        9.36 MB/sec
+Concurrency:		      146.51
+Successful transactions:        4993
+Failed transactions:	           0
+Longest transaction:	        7.62
+Shortest transaction:	        0.97
+ 
+** SIEGE 4.0.7
+** Preparing 200 concurrent users for battle.
+The server is now under siege...
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+
+Lifting the server siege...
+Transactions:		        6152 hits
+Availability:		       99.87 %
+Elapsed time:		       59.93 secs
+Data transferred:	      674.07 MB
+Response time:		        1.92 secs
+Transaction rate:	      102.65 trans/sec
+Throughput:		       11.25 MB/sec
+Concurrency:		      196.81
+Successful transactions:        6152
+Failed transactions:	           8
+Longest transaction:	       21.30
+Shortest transaction:	        0.99
+ 
+** SIEGE 4.0.7
+** Preparing 250 concurrent users for battle.
+The server is now under siege...
+[[1;33merror[0m] Address resolution failed at sock.c:158 with the following error:: Resource temporarily unavailable
+[[1;33merror[0m] Temporary failure in name resolution: Resource temporarily unavailable
+[[1;33merror[0m] Address resolution failed at sock.c:158 with the following error:: Resource temporarily unavailable
+[[1;33merror[0m] Temporary failure in name resolution: Resource temporarily unavailable
+[[1;33merror[0m] Address resolution failed at sock.c:158 with the following error:: Resource temporarily unavailable
+[[1;33merror[0m] Temporary failure in name resolution: Resource temporarily unavailable
+[[1;33merror[0m] Address resolution failed at sock.c:158 with the following error:: Resource temporarily unavailable
+[[1;33merror[0m] Temporary failure in name resolution: Resource temporarily unavailable
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+
+Lifting the server siege...
+Transactions:		        7029 hits
+Availability:		       99.49 %
+Elapsed time:		       59.88 secs
+Data transferred:	      779.02 MB
+Response time:		        2.08 secs
+Transaction rate:	      117.38 trans/sec
+Throughput:		       13.01 MB/sec
+Concurrency:		      243.71
+Successful transactions:        7029
+Failed transactions:	          36
+Longest transaction:	       10.69
+Shortest transaction:	        0.98
+ 
