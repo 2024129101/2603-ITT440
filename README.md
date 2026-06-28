@@ -42,6 +42,9 @@ Now run jupyter-lab container
 ```
 sudo docker run -p 8889:8888 -v "$(pwd)":/kelassir jupyter/scipy-notebook
 ```
+### Video
+[![Watch YouTube](https://www.youtube.com/watch?v=Ui98GXWVk6Q)](https://www.youtube.com/watch?v=Ui98GXWVk6Q)
+
 
 ## Socket Programming using Python
 ***Simple Python UDP Time Server***
@@ -432,6 +435,9 @@ async def main():
     await asyncio.gather(squarer.run(), cuber.run(), fourther.run())
 
     print("\nSemua tugasan Asyncio telah selesai!")
+
+### Video
+[![Watch YouTube Video](https://www.youtube.com/watch?v=xsHDrERoNRw)](https://www.youtube.com/watch?v=xsHDrERoNRw)
 
 
 if __name__ == "__main__":
