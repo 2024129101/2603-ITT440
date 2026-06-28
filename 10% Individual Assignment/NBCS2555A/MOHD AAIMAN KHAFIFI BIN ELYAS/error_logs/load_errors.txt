@@ -1,0 +1,55 @@
+** SIEGE 4.0.7
+** Preparing 50 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...
+Transactions:		        1991 hits
+Availability:		      100.00 %
+Elapsed time:		       59.40 secs
+Data transferred:	      214.47 MB
+Response time:		        1.47 secs
+Transaction rate:	       33.52 trans/sec
+Throughput:		        3.61 MB/sec
+Concurrency:		       49.27
+Successful transactions:        1991
+Failed transactions:	           0
+Longest transaction:	        4.08
+Shortest transaction:	        0.94
+ 
+** SIEGE 4.0.7
+** Preparing 50 concurrent users for battle.
+The server is now under siege...
+
+Lifting the server siege...
+Transactions:		        1960 hits
+Availability:		      100.00 %
+Elapsed time:		       59.95 secs
+Data transferred:	      211.02 MB
+Response time:		        1.50 secs
+Transaction rate:	       32.69 trans/sec
+Throughput:		        3.52 MB/sec
+Concurrency:		       49.09
+Successful transactions:        1960
+Failed transactions:	           0
+Longest transaction:	        7.44
+Shortest transaction:	        0.94
+ 
+** SIEGE 4.0.7
+** Preparing 50 concurrent users for battle.
+The server is now under siege...
+[[1;33merror[0m] Failed to make an SSL connection: 5: Connection reset by peer
+
+Lifting the server siege...
+Transactions:		        1806 hits
+Availability:		       99.89 %
+Elapsed time:		       59.96 secs
+Data transferred:	      206.51 MB
+Response time:		        1.63 secs
+Transaction rate:	       30.12 trans/sec
+Throughput:		        3.44 MB/sec
+Concurrency:		       49.11
+Successful transactions:        1806
+Failed transactions:	           2
+Longest transaction:	        5.34
+Shortest transaction:	        0.96
+ 
