@@ -1,8 +1,7 @@
-
 ## Title : Adaptive Performance Analysis of Digital Library Web Services Under Dynamic User Load
 
 | Details | Information |
-|---|---|
+|----------|----------|
 | Course | ITT440 – Network Programming |
 | Group | NBCS2555A |
 | Name | Mohamed Solahuddin bin Johari |
@@ -15,7 +14,9 @@
 
 # 1. Introduction
 
-Performance testing is important to evaluate the stability, scalability, and responsiveness of a web service when handling multiple users at the same time. In this project, Apache JMeter was used to perform performance testing on the OpenLibrary API.
+Performance testing is important to evaluate the stability, scalability, and responsiveness of a web service when handling multiple users at the same time.
+
+In this project, Apache JMeter was used to perform performance testing on the OpenLibrary API.
 
 The selected API is a public API provided by OpenLibrary that allows users to search book information online. This project focuses on analyzing API behavior under different traffic conditions using Load Test, Stress Test, and Spike Test.
 
@@ -32,7 +33,7 @@ The objectives of this project are:
 
 ## 2.1 Tools Used
 
-- Apache JMeter 5.6.3 zip
+- Apache JMeter 5.6.3
 - Java JDK
 - Windows 11
 
@@ -47,7 +48,7 @@ https://openlibrary.org/search.json
 ## 2.3 Testing Types
 
 | Test Type | Description |
-|---|---|
+|----------|----------|
 | Load Test | Evaluate system performance under normal increasing traffic |
 | Stress Test | Evaluate system behavior under heavy user load |
 | Spike Test | Evaluate system stability during sudden traffic spikes |
@@ -59,7 +60,7 @@ https://openlibrary.org/search.json
 ## 3.1 Load Test
 
 | Configuration | Value |
-|---|---|
+|----------|----------|
 | Number of Threads (Users) | 20 |
 | Ramp-Up Period | 10 seconds |
 | Loop Count | 3 |
@@ -73,7 +74,7 @@ The Load Test was conducted to analyze API performance under normal user traffic
 ## 3.2 Stress Test
 
 | Configuration | Value |
-|---|---|
+|----------|----------|
 | Number of Threads (Users) | 50 |
 | Ramp-Up Period | 20 seconds |
 | Loop Count | 5 |
@@ -87,7 +88,7 @@ The Stress Test was conducted to determine how the system behaves when handling 
 ## 3.3 Spike Test
 
 | Configuration | Value |
-|---|---|
+|----------|----------|
 | Number of Threads (Users) | 80 |
 | Ramp-Up Period | 1 second |
 | Loop Count | 3 |
@@ -103,7 +104,7 @@ The Spike Test was conducted to analyze system behavior when sudden high traffic
 ## 4.1 APDEX Level
 
 | APDEX Score | Level |
-|---|---|
+|----------|----------|
 | 0.94 – 1.00 | Excellent |
 | 0.85 – 0.93 | Good |
 | 0.70 – 0.84 | Fair |
@@ -112,18 +113,26 @@ The Spike Test was conducted to analyze system behavior when sudden high traffic
 
 ---
 
-## 4.2 Load Test Result
+# 4.2 Load Test Result
 
-### Summary
+## Summary
 
 | Metric | Result |
-|---|---|
+|----------|----------|
 | APDEX Score | 0.275 |
 | Pass Rate | 100% |
 | Fail Rate | 0% |
 | Average Response Time | 2226.67 ms |
 | Maximum Response Time | 6404 ms |
 | Throughput | 3.13 transactions/s |
+
+### Dashboard Summary
+
+![Load Test Summary](summary.png)
+
+### Response Time Percentiles and Time vs Threads
+
+![Load Test Graph](response%20time%20percentile%20and%20time%20vs%20thread.png)
 
 ### Analysis
 
@@ -139,12 +148,12 @@ The Time Vs Threads graph shows that response time increased when the number of 
 
 ---
 
-## 4.3 Stress Test Result
+# 4.3 Stress Test Result
 
-### Summary
+## Summary
 
 | Metric | Result |
-|---|---|
+|----------|----------|
 | APDEX Score | 0.054 |
 | Pass Rate | 46.4% |
 | Fail Rate | 53.6% |
@@ -152,6 +161,14 @@ The Time Vs Threads graph shows that response time increased when the number of 
 | Maximum Response Time | 8760 ms |
 | Throughput | 6.80 transactions/s |
 | Error Type & Number of Errors | 429 Too Many Requests (134) |
+
+### Dashboard Summary
+
+![Stress Test Summary](summary(6).png)
+
+### Response Time Percentiles and Time vs Threads
+
+![Stress Test Graph](respone%20time%20percentile%20%26%20Time%20vs%20threads.png)
 
 ### Analysis
 
@@ -169,12 +186,12 @@ The Time Vs Threads graph shows that the response time became higher as the numb
 
 ---
 
-## 4.4 Spike Test Result
+# 4.4 Spike Test Result
 
-### Summary
+## Summary
 
 | Metric | Result |
-|---|---|
+|----------|----------|
 | APDEX Score | 0.000 |
 | Pass Rate | 22.08% |
 | Fail Rate | 77.92% |
@@ -182,6 +199,14 @@ The Time Vs Threads graph shows that the response time became higher as the numb
 | Maximum Response Time | 8796 ms |
 | Throughput | 15.19 transactions/s |
 | Error Type & Number of Errors | 429 Too Many Requests (187) |
+
+### Dashboard Summary
+
+![Spike Test Summary](summary(5).png)
+
+### Response Time Percentiles and Time vs Threads
+
+![Spike Test Graph](response%20time%20percentile%20%26%20time%20Vs%20threads.png)
 
 ### Analysis
 
@@ -198,9 +223,12 @@ From the Response Time Percentiles graph, the response time increased sharply du
 The Time Vs Threads graph also shows unstable response times when the number of users suddenly increased, which means the system struggled to handle sudden traffic spikes efficiently.
 
 ---
+
 # 5. Demo Video
 
-https://www.youtube.com/watch?v=xofH9bl939U
+▶ https://www.youtube.com/watch?v=xofH9bl939U
+
+---
 
 # 6. Discussion
 
@@ -220,24 +248,20 @@ In conclusion, Apache JMeter successfully analyzed the performance of the OpenLi
 
 The Load Test showed that the system remained stable under normal traffic with no failed requests. However, the Stress Test and Spike Test revealed that the API performance became unstable under heavier traffic conditions.
 
-The high number of “429 Too Many Requests” errors indicates that the server has traffic limitations and cannot efficiently handle sudden or excessive requests.
+The high number of "429 Too Many Requests" errors indicates that the server has traffic limitations and cannot efficiently handle sudden or excessive requests.
 
 Overall, this project successfully demonstrated how performance testing can be used to analyze system stability, response time, scalability, and user satisfaction under dynamic user patterns.
 
 ---
 
-#Demo Video
+# 8. References
 
-https://www.youtube.com/watch?v=xofH9bl939U
+Apache JMeter. (2024). Apache JMeter User Manual.
 
-# 7. References
+Kelas Sir. (2024). Apache JMeter Tutorial Videos.
 
-Apache JMeter. (2024). *Apache JMeter user manual*. Apache Software Foundation. https://jmeter.apache.org/
+OpenLibrary. (2024). OpenLibrary API Documentation.
 
-Kelas Sir. (2024). *Apache JMeter tutorial videos* [YouTube channel]. YouTube. https://www.youtube.com/@kelassir5655
+Oracle. (2024). Java Documentation.
 
-OpenLibrary. (2024). *OpenLibrary API documentation*. https://openlibrary.org/developers/api
-
-Oracle. (2024). *Java documentation*. Oracle Corporation. https://www.oracle.com/java
-
-OutSystems. (2024). *The Apdex performance score*. https://success.outsystems.com/documentation/11/monitoring_and_troubleshooting_apps/the_apdex_performance_score/
+OutSystems. (2024). The Apdex Performance Score.
