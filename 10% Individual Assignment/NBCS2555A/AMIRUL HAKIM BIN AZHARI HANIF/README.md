@@ -9,7 +9,7 @@ Course Code: ITT440 - Network Pogramming
 Target Application: [BlazeDemo](https://blazedemo.com/)  
 Testing Framework: Locust (Python-based asynchronous event-driven framework)  
 Author: AMIRUL HAKIM BIN AZHARI HANIF - 2024901571   
-Video Presentation Link: -------
+Video Presentation Link: https://youtu.be/bReyqURI-ac
 
 ---
 
@@ -56,7 +56,12 @@ The automated test environment was initialized and executed entirely via the com
 
 ### Trigger the runtime engine
 * locust -f locustfile.py --host=[https://blazedemo.com](https://blazedemo.com)
+
+![Stress Test Charts](locust%20run.png)
+  
 * Run http://localhost:8089 on browser.
+  
+![Stress Test Charts](locust%20web%20interface.png)
 
 ### Simulated User Behavior Workflow:
 Every virtual user was programmed to execute the full booking pipeline sequentially, injecting a realistic human "think time" interval of 1 to 3 seconds between individual actions:
