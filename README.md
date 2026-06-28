@@ -43,8 +43,7 @@ Now run jupyter-lab container
 sudo docker run -p 8889:8888 -v "$(pwd)":/kelassir jupyter/scipy-notebook
 ```
 ### Video
-[![Watch YouTube](https://www.youtube.com/watch?v=Ui98GXWVk6Q)](https://www.youtube.com/watch?v=Ui98GXWVk6Q)
-
+[![Watch YouTube](https://img.youtube.com/vi/Ui98GXWVk6Q/0.jpg)](https://www.youtube.com/watch?v=Ui98GXWVk6Q)
 
 ## Socket Programming using Python
 ***Simple Python UDP Time Server***
