@@ -437,7 +437,7 @@ async def main():
     print("\nSemua tugasan Asyncio telah selesai!")
 
 ### Video
-[![Watch YouTube Video](https://www.youtube.com/watch?v=xsHDrERoNRw)](https://www.youtube.com/watch?v=xsHDrERoNRw)
+[![Watch YouTube Video](https://img.youtube.com/vi/xsHDrERoNRw/0.jpg)](https://www.youtube.com/watch?v=xsHDrERoNRw)
 
 
 if __name__ == "__main__":
